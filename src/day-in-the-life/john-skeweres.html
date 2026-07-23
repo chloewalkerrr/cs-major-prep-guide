@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Careers</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#7c2529;
+      --muted:#666;
+      --maxw:900px;
+      --radius:12px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#fff5f5 0%,var(--bg) 100%);
+      color:#111;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      min-height:100vh;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(15,30,60,0.08);
+      overflow:hidden;
+      margin:2rem auto;
+    }
+
+    .hero{
+      display:flex;
+      gap:24px;
+      padding:28px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .avatar {
+      width:160px;
+      height:200px;
+      border-radius:8px;
+      overflow:hidden;
+      flex:0 0 160px;
+      box-shadow:0 8px 20px rgba(10,30,60,0.08);
+      background:linear-gradient(180deg,#ddd,#eee);
+    }
+
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .intro{
+      flex:1 1 300px;
+      min-width:220px;
+      line-height:1.6;
+    }
+
+    .intro h1{
+      margin:0 0 6px 0;
+      font-size:22px;
+      color:var(--accent);
+    }
+
+    .intro h2{
+      margin:0 0 10px 0;
+      font-size:18px;
+      color:#222;
+      font-weight:600;
+    }
+
+    .intro p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .meta{
+      padding:20px 28px;
+      border-top:1px solid #f0f3f6;
+      display:flex;
+      gap:16px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .meta .tag{
+      background:#fdf2f2;
+      color:var(--accent);
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    .meta .location{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .continue{
+      padding:28px;
+      text-align:center;
+    }
+
+    .continue p{
+      margin-bottom:16px;
+      font-size:1.1rem;
+      color:#333;
+    }
+
+    .continue button{
+      background-color:var(--accent);
+      color:#fff;
+      border:none;
+      padding:0.8rem 1.6rem;
+      font-size:1rem;
+      border-radius:8px;
+      cursor:pointer;
+      transition:background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .continue button:hover{
+      background-color:#a53035;
+      transform:translateY(-2px);
+    }
+
+    .menu {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .menu a {
+      text-decoration: none;
+    }
+
+    .menu button {
+      background-color: #7c2529;
+      color: #ffffff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .menu button:hover {
+      background-color: #a53035;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CS Careers</h1>
+    <nav class="menu">
+      <a href="../main-page.html"><button>Home</button></a>
+      <a href="../more-cs-page.html"><button>More CS</button></a>
+      <a href="../careers-page.html"><button>Careers</button></a>
+      <a href="../major-prep-page.html"><button>Prep</button></a>
+      <a href="../lifeofCSmajor.html"><button>Life of CS Major</button></a>
+      <a href="day-in-the-life/john-skeweres.html"><button>Day in Life</button></a>
+
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="avatar" aria-hidden="true">
+        <img src="https://oceagles.com/images/2025/2/4/OC_JVBSB_Headshots_John_Skweres.jpg" alt="John Skweres headshot — Oklahoma Christian baseball">
+      </div>
+
+      <div class="intro">
+        <h1 id="intro-title">Hi, I'm John Skweres.</h1>
+        <h2>Computer Science Senior • Pitcher • Oklahoma Christian University</h2>
+        <p>
+          I’m a senior at Oklahoma Christian University majoring in Computer Science and I pitch for the OC Eagles baseball team.
+          This page introduces me, and you can continue below to see what a day in my life looks like.
+        </p>
+      </div>
+    </section>
+
+    <div class="meta">
+      <div class="tag">Senior • Computer Science</div>
+      <div class="location">Oklahoma Christian University — Edmond, OK</div>
+    </div>
+
+    <section class="continue">
+      <p>Continue to see a day in my life:</p>
+      <button onclick="window.location.href='morning.html'">Start with My Morning</button>
+    </section>
+  </main>
+</body>
+</html>

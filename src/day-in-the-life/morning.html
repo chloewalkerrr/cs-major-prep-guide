@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John's Morning</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#7c2529;
+      --muted:#666;
+      --maxw:900px;
+      --radius:12px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#fff5f5 0%,var(--bg) 100%);
+      color:#111;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      min-height:100vh;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(15,30,60,0.08);
+      overflow:hidden;
+      margin:2rem auto;
+    }
+
+    .content{
+      padding:28px;
+      line-height:1.7;
+      color:#222;
+    }
+
+    .content h2{
+      color:var(--accent);
+      margin-top:0;
+    }
+
+    .content img{
+      max-width:100%;
+      border-radius:12px;
+      margin:20px 0;
+      box-shadow:0 8px 20px rgba(10,30,60,0.08);
+    }
+
+    .continue{
+      padding:28px;
+      text-align:center;
+    }
+
+    .continue p{
+      margin-bottom:16px;
+      font-size:1.1rem;
+      color:#333;
+    }
+
+    .continue button{
+      background-color:var(--accent);
+      color:#fff;
+      border:none;
+      padding:0.8rem 1.6rem;
+      font-size:1rem;
+      border-radius:8px;
+      cursor:pointer;
+      transition:background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .continue button:hover{
+      background-color:#a53035;
+      transform:translateY(-2px);
+    }
+
+    .menu {
+      margin-top: 1rem;
+    }
+
+    .menu a {
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .menu button {
+      background-color: #ffffff;
+      color: #7c2529;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .menu button:hover {
+      background-color: #d8d8d8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>John’s Morning</h1>
+    <nav class="menu">
+      <a href="../main-page.html"><button>Home</button></a>
+      <a href="../more-cs-page.html"><button>More CS</button></a>
+      <a href="../careers-page.html"><button>Careers</button></a>
+      <a href="../major-prep-page.html"><button>Prep</button></a>
+      <a href="../lifeofCSmajor.html"><button>Life of CS Major</button></a>
+      <a href="day-in-the-life/john-skeweres.html"><button>Day in Life</button></a>
+
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <section class="content">
+      <h2>Early Start</h2>
+      <p>
+        John wakes up at <strong>5:00 AM</strong> to run and lift weights with his baseball teammates.  
+        After training, he comes home at 6:00, crashes back into bed for a quick nap, and wakes up again at 7:00.
+      </p>
+
+      <h2>Breakfast & Class</h2>
+      <p>
+        He gets ready for the day and makes time for breakfast before heading off to his <strong>8:00 AM Principles of Management</strong> class.  
+      </p>
+      <img src="https://haverecipes.com/wp-content/uploads/2021/08/DE2D39A2-D774-4D36-B79C-D797DF7BABE0-1024x768.jpeg" alt="Scrambled eggs breakfast">
+
+      <h2>Study Time</h2>
+      <p>
+        After class, John spends the rest of his morning working on homework and coding assignments until about 11:00, when it’s time for lunch.
+      </p>
+    </section>
+
+    <section class="continue">
+      <p>Continue to see John’s afternoon:</p>
+      <button onclick="window.location.href='afternoon.html'">Go to Afternoon</button>
+    </section>
+  </main>
+</body>
+</html>

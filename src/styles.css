@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #7c2529; /* Crimson */
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* Intro Section */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.intro {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Next Button */
+.next-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #7c2529;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.next-button:hover {
+  background-color: #a53035;
+=======
+/* Button container for nav buttons */
+.button-container {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.nav-button {
+  background-color: #7c2529;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.next-button:hover {
+  background-color: #a53035;
+
+/* Extra dropdown styling */
+.dropdown {
+    margin: 1rem 0;
+}
+
+select {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #7c2529;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333333;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+select:hover {
+    border-color: #a53035;
+}
+
+.career-info {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #444444;
+}
+<<<<<<< Updated upstream
+
+.menu {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.menu button {
+  background-color: #7c2529;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu button:hover {
+  background-color: #a53035;
+  transform: translateY(-2px);
+}
+=======
+>>>>>>> Stashed changes
+}

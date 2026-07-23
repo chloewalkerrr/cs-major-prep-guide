@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Careers</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Menu styles */
+    .menu {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .menu a {
+      text-decoration: none;
+    }
+
+    .menu button {
+      background-color: #7c2529;
+      color: #ffffff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .menu button:hover {
+      background-color: #a53035;
+      transform: translateY(-2px);
+    }
+
+    /* Dropdown & career info styles */
+    .dropdown {
+      margin: 2rem 0;
+    }
+
+    select {
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #7c2529;
+      border-radius: 5px;
+      background-color: #ffffff;
+      color: #333333;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+
+    select:hover {
+      border-color: #a53035;
+    }
+
+    .career-info {
+      margin-top: 1.5rem;
+      font-size: 1.05rem;
+      color: #444444;
+      text-align: left;
+      line-height: 1.8;
+      padding: 1.2rem;
+      border-left: 4px solid #7c2529;
+      background: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    .career-text strong {
+      color: #7c2529;
+    }
+
+    .salary-badge {
+      display: inline-block;
+      margin-top: 0.8rem;
+      background-color: #7c2529;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 0.4rem 0.9rem;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CS Careers</h1>
+    <!-- Navigation Menu -->
+    <nav class="menu">
+      <a href="main-page.html"><button>Home</button></a>
+      <a href="more-cs-page.html"><button>More CS</button></a>
+      <a href="careers-page.html"><button>Careers</button></a>
+      <a href="major-prep-page.html"><button>Prep</button></a>
+      <a href="lifeofCSmajor.html"><button>Life of CS Major</button></a>
+      <a href="day-in-the-life/john-skeweres.html"><button>Day in Life</button></a>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="intro">
+      <p>Select a career below to learn more about it.</p>
+
+      <!-- Dropdown -->
+      <div class="dropdown">
+        <label for="career-select">Choose a career:</label><br>
+        <select id="career-select">
+          <option value="">-- Select a career --</option>
+          <option value="software">Software Developer</option>
+          <option value="web">Web Developer</option>
+          <option value="data">Data Scientist</option>
+          <option value="ml">Machine Learning Engineer</option>
+          <option value="cyber">Cybersecurity Specialist</option>
+          <option value="cloud">Cloud Engineer</option>
+          <option value="game">Game Developer</option>
+        </select>
+      </div>
+
+      <!-- Info Box -->
+      <div class="career-info" id="career-info">
+        Pick a career to see details.
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const careerDetails = {
+      software: { icon: "💻", text: "<strong>Responsibilities:</strong> Design, code, test, and maintain apps.<br><strong>Skills:</strong> Problem-solving, teamwork.<br><strong>Tools:</strong> Java, Python, C++, Git.<br>", salary: "$70,000 - $80,000" },
+      web: { icon: "🌐", text: "<strong>Responsibilities:</strong> Build websites and web apps.<br><strong>Skills:</strong> Creativity, design, coding.<br><strong>Tools:</strong> HTML, CSS, JavaScript, React.<br>", salary: "$60,000 - $75,000" },
+      data: { icon: "📊", text: "<strong>Responsibilities:</strong> Analyze datasets and build models.<br><strong>Skills:</strong> Analytical thinking, statistics.<br><strong>Tools:</strong> Python, R, SQL, Tableau.<br>", salary: "$85,000 - $95,000" },
+      ml: { icon: "🤖", text: "<strong>Responsibilities:</strong> Deploy AI models for tasks like image recognition.<br><strong>Skills:</strong> Math, problem-solving, data analysis.<br><strong>Tools:</strong> TensorFlow, PyTorch, Python.<br>", salary: "$95,000 - $110,000" },
+      cyber: { icon: "🔐", text: "<strong>Responsibilities:</strong> Protect systems from cyberattacks.<br><strong>Skills:</strong> Attention to detail, ethics.<br><strong>Tools:</strong> Firewalls, Kali Linux, Wireshark.<br>", salary: "$65,000 - $80,000" },
+      cloud: { icon: "☁️", text: "<strong>Responsibilities:</strong> Manage cloud infrastructure.<br><strong>Skills:</strong> Systems thinking, automation.<br><strong>Tools:</strong> AWS, Azure, Docker, Kubernetes.<br>", salary: "$80,000 - $95,000" },
+      game: { icon: "🎮", text: "<strong>Responsibilities:</strong> Develop video games.<br><strong>Skills:</strong> Creativity, storytelling.<br><strong>Tools:</strong> Unity, Unreal Engine, C#, Blender.<br>", salary: "$55,000 - $70,000" }
+    };
+
+    const select = document.getElementById("career-select");
+    const infoBox = document.getElementById("career-info");
+
+    select.addEventListener("change", () => {
+      const value = select.value;
+      if (careerDetails[value]) {
+        infoBox.innerHTML = `
+          <div class="icon">${careerDetails[value].icon}</div>
+          <div class="career-text">
+            ${careerDetails[value].text}
+            <div class="salary-badge">Starting Salary: ${careerDetails[value].salary}</div>
+          </div>
+        `;
+      } else {
+        infoBox.textContent = "Pick a career to see details.";
+      }
+    });
+  </script>
+</body>
+</html>
