@@ -24,4 +24,6 @@ I was one of four contributors on this team, working across the codebase — inc
 
 ---
 
-*This repository was copied from the [original team project](https://github.com/Heibetz/SEIV-project-1) to showcase in my personal portfolio. The code itself is our own team's original work from the course; this README's wording was drafted with AI assistance and reviewed/edited by me.*
+**Note:** This repository was copied from the [original team project](https://github.com/Heibetz/SEIV-project-1) to showcase in my personal portfolio. The code is our team's original work from the course.
+
+**AI disclosure:** This README's wording was drafted with AI assistance and reviewed by me.
